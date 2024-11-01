@@ -1,5 +1,5 @@
 # groopDM-leaver
-Discord.py-selfを使った全グループDMの自動退出
+## Discord.py-selfを使った全グループDMの自動退出
 <br>
 ・`pip install discord.py-self`, `pip install python_dotenv`を実行してdpy-selfとdotenvをインストール<br>
 ・`python main.py`で実行<br>
@@ -8,8 +8,9 @@ Discord.py-selfを使った全グループDMの自動退出
 <br>
 ・もし退出したくないグループDMがある場合はそのグループのIDをDM_IDSに入れておくとそこは除外されます
 <br>
+### 全部のグループDMから脱退する場合
+
 ```python
-# 全部のグループDMから脱退する場合
 import discord  
 import os
 from dotenv import load_dotenv
@@ -31,8 +32,9 @@ async def on_ready():
 
 client.run(TOKEN)
 ```
+### 一部のグループからは抜けたくない場合
+
 ```python
-# 一部のグループからは抜けたくない場合
 DM_IDS = ["12345678", "23456789"]
 
 @client.event
