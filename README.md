@@ -9,6 +9,7 @@ Discord.py-selfを使った全グループDMの自動退出
 ・もし退出したくないグループDMがある場合はそのグループのIDをDM_IDSに入れておくとそこは除外されます
 <br>
 ```python
+# 全部のグループDMから脱退する場合
 import discord  
 import os
 from dotenv import load_dotenv
@@ -18,17 +19,12 @@ client = discord.Client()
 
 TOKEN = os.getenv("TOKEN")
 
-# もし退出したくないグループDMがある場合はここにIDを書いておく
-# DM_IDS = ["", ""] 
-
 @client.event
 async def on_ready():
     print(f"{client.user} is online！")
     group_dms = [dm for dm in client.private_channels if isinstance(dm, discord.GroupChannel)]
     left_count = 0
     for dm in group_dms:
-      # DM_IDSを入力した場合はこれを書いておく
-      # if str(dm.id) not in DM_IDS:
             await dm.leave()
             left_count += 1
     print(f"{left_count}件のグループDMからの退出が完了しました")
@@ -36,6 +32,7 @@ async def on_ready():
 client.run(TOKEN)
 ```
 ```python
+# 一部のグループからは抜けたくない場合
 DM_IDS = ["12345678", "23456789"]
 
 @client.event
@@ -46,4 +43,5 @@ async def on_ready():
     for dm in group_dms:
         if str(dm.id) not in DM_IDS:
             await dm.leave()
+    print(f"{left_count}件のグループDMからの退出が完了しました")
 ```
