@@ -1,4 +1,5 @@
 # groopDM-leaver
+Discord.py-selfを使用したグループDM自動退出セルボ
 ## 目的
 大量のグループDMに追加されるスパムへの対処<br>
 Selfbotは規約違反のため使う際は自己責任で
