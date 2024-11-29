@@ -1,4 +1,7 @@
 # groopDM-leaver
+## 目的
+大量のグループDMに追加されるスパムへの対処<br>
+Selfbotは規約違反のため使う際は自己責任で
 ## Discord.py-selfを使った全グループDMの自動退出
 1. ```pip install discord.py-self python_dotenv```
 1. ```python main.py```
