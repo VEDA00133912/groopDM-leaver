@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-client = discord.Client()
+client = discord.Client(self_bot=True, chunk_guilds_at_startup=False) 
 
 TOKEN = os.getenv("TOKEN")
 
