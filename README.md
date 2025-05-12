@@ -5,7 +5,7 @@ Discord.py-selfを使用したグループDM自動退出セルボ<br>
 大量のグループDMに追加されるスパムへの対処<br>
 Selfbotは規約違反のため使う際は自己責任で
 ## Discord.py-selfを使った全グループDMの自動退出
-1.必要なものをインストール
+1.ターミナル開いてこれする
 ```
 pip install discord.py-self python_dotenv
 ```
