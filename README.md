@@ -1,4 +1,4 @@
-# groopDM-leaver
+# groupDM-leaver
 Discord.py-selfを使用したグループDM自動退出セルボ<br>
 元コードは06君
 ## 目的
